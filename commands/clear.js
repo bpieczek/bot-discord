@@ -1,4 +1,3 @@
-const log = console.log
 const MAX_AMOUNT = 99;
 
 module.exports = {

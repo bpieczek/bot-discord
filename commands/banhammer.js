@@ -1,8 +1,3 @@
-const { lchown } = require("fs");
-
-const log = console.log
-const MAX_AMOUNT = 99;
-
 module.exports = {
     name: "banhammer",
     description: "banuje użytkonika",
@@ -14,7 +9,7 @@ module.exports = {
         if(member == null) return msg.channel.send('Nie moge znaleźć takiej osoby');
         if(!member.bannable) return msg.channel.send('Nie moge zbanować tego człowieka jest zbyt silny dla mnie');
 
-        member.ban().then(()=>{
+        member.ban({reason: args.slice(1).join(" ")}).then(()=>{
             msg.channel.send(`Użytkownik ${member} został pomyślnie zbanowany`);
         });
     }

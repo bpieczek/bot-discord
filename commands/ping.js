@@ -1,5 +1,3 @@
-const log = console.log
-
 module.exports = {
     name: "ping",
     description: "pinguje x razy",
