@@ -1,6 +1,7 @@
 module.exports = {
     name: "ping",
-    description: "pinguje x razy",
+    description: "Wysyła daną wiadomość np ping x razy",
+    template: "ping <dowolny ciąg znaków> <ilość powtórzeń>",
     run(msg, args)
     {
         if(args.length < 2)

@@ -2,7 +2,8 @@ const MAX_AMOUNT = 99;
 
 module.exports = {
     name: "clear",
-    description: "czyści x wiadomości kanał",
+    description: "Czyści x wiadomości kanał",
+    template: "clear <ilość wiadomości do usunięcia>",
     run(msg, args)
     {
         if(!isNaN(args[args.length-1]))

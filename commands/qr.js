@@ -9,6 +9,7 @@ const qrembed = new EmbedBuilder()
 module.exports = {
     name: "qr",
     description: "Generuje kod qr z podanego linku",
+    template: "qr <link do strony>",
     run(msg, args)
     {
         if(!args[0].startsWith("http")) return msg.channel.send('Prosze podaj link poprawny');
@@ -21,9 +22,7 @@ module.exports = {
             width: "1000"
         }, function(err){
             if(err) 
-            {
                 return msg.channel.send('Cos poszlo nie tak');
-            }
 
             qrembed
             .setColor('Random')
