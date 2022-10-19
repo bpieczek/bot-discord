@@ -1,7 +1,7 @@
 module.exports = {
-    name: "banhammer",
+    name: "ban",
     description: "Banuje użytkonika",
-    template: "banhammer <Oznacznie osoby> <Powód>",
+    template: "ban <Oznacznie osoby> <Powód>",
     run(msg, args)
     {
         if(args.length == 0) return msg.channel.send("Oznacz kogo chcesz zbanować")
